@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The-Hangman</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="app.js" defer></script>
   </head>
   <body>
-    <h1>Hangman</h1>
+    <h1 data-aos="flip-left">Hangman</h1>
     <p>Find the Hidden word- Enter a Letter</p>
     <div class="game-container">
       <!-- our Rod -->
-      <svg height="250" width="200" class="figure-container">
+      <svg height="250" width="200" class="figure-container" data-aos="flip-up">
         <line x1="60" y1="20" x2="140" y2="20" />
         <line x1="140" y1="20" x2="140" y2="50" />
         <line x1="60" y1="20" x2="60" y2="230" />
@@ -31,23 +34,14 @@
       </svg>
 
       <div class="wrong-letter-container">
-        <div id="wrong-letters">
-          <p>Wrong</p>
-          <span>e,r,t,</span>
-        </div>
+        <div id="wrong-letters"></div>
       </div>
-      <div class="word" id="word">
-        <div class="letter">h</div>
-        <div class="letter">e</div>
-        <div class="letter">l</div>
-        <div class="letter">l</div>
-        <div class="letter">o</div>
-      </div>
+      <div class="word" id="word"></div>
     </div>
     <!-- Container for final message -->
     <div class="pop-up-container" id="popUp-container">
       <div class="popUp">
-        <h2 id="final-Message">You have won</h2>
+        <h2 id="final-Message"></h2>
         <button id="play-button">Play Again</button>
       </div>
     </div>
